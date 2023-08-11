@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+#logo-pagina img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+}
+#inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center ;
+
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#n-mesas{
+    border-radius: 5%;
+    width: 100px;
+    height: 30px;
+}
+#mesas{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.clase-botones{
+    width: 150px;
+    height: 35px;
+    background-color: rgb(218, 143, 3);
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 17px;
+}
+.tarjeta-comidas{
+    width: 150px;
+    height: 60px;
+    background-color: rgb(255, 183, 95);
+    border-radius: 5%;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+}
+
+.tarjeta-mesas{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 183, 95);
+    border-radius: 5%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.tarjeta-mesas img{
+    width: 130px;
+    height: 120px;
+}
+#id-mesa{
+    margin: 5px;
+}
+input:checked + label {
+    background-color: rgb(218, 143, 3);
+}
+#seccion-productos{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#div-productos1{
+    display: flex;
+    gap: 10px;
+}
+#div-productos{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.input-comida, .input-mesas  {
+    display:none;
+}
+@media (max-width: 400px){
+    #div-productos1{
+        display: flex;
+        flex-direction: column;
+    }
+}
