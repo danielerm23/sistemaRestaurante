@@ -26,31 +26,44 @@
 
         <section id="seccion-mesas">
             <div id="mesas">
-
             </div>
         </section>
-        <section id="seccion-productos">
-            <div id="div-productos1">
-                <input type="radio" name="comida" id="bebidas" class="input-comida"/>
-                <label class="tarjeta-comidas" for="bebidas">
-                    <p>Bebidas</p>
-                </label>
-                <input type="radio" name="comida" id="raciones" class="input-comida"/>
-                <label class="tarjeta-comidas" for="raciones">
-                    <p>Raciones</p>
-                </label>
-                <input type="radio" name="comida" id="comidas" class="input-comida"/>
-                <label class="tarjeta-comidas" for="comidas">
-                    <p>Comidas</p>
-                </label>
+        <section id="contenedor">
+            <div id="div-resumen">
+                <div id="resumen"></div>
             </div>
-            <div id="div-productos2">
-                
+            <div id="div-principal">
+                <section id="seccion-productos">
+
+                    <div id="div-productos1">
+                        <button id="boton-bebidas" class="clase-botones">bebidas</button>
+                        <button id="boton-raciones" class="clase-botones">raciones</button>
+                        <button id="boton-comidas" class="clase-botones">comidas</button>
+                    </div>
+
+                    <div id="div-productos2">   
+                    </div>
+
+                    <div id="div-productos">
+                        <button id="boton-guardar" class="clase-botones">guardar</button>
+                    </div>
+                </section> 
+
+                <div id="div-bebidas">
+                    <button class="boton-bebidas" id="boton-coca-cola-original"><img src="./img/cocacola.png" alt="coca-cola">Coca-Cola Original</button>
+                    <button class="boton-bebidas" id="boton-coca-cola-zero"><img src="./img/cocacolazero.png" alt="">Coca-Cola Zero</button>
+                    <button class="boton-bebidas" id="boton-coca-cola-zero-zero"><img src="./img/cocacolazerozero.png" alt="">Coca-Cola Zero Zero</button>
+                    <button class="boton-bebidas" id="boton-agua-con-gas"><img src="./img/aguacongas.png" alt="">Agua Con Gas</button>
+                    <button class="boton-bebidas" id="boton-agua-sin-gas"><img src="./img/aguasingas.png" alt="">Agua Sin Gas</button>
+                    <button class="boton-bebidas" id="boton-cerveza"><img src="./img/cerveza.png" alt="">Cerveza</button>
+                    <button class="boton-bebidas" id="boton-cerveza-sin-alcohol"><img src="./img/mahou00.png" alt="">Cerveza Sin Alcohol</button>
+                    <button class="boton-bebidas" id="boton-nestea"><img src="./img/nestea.png" alt="">Nestea</button>
+
+                </div>
+                <div id="div-raciones">raciones</div>
+                <div id="div-comidas">comidas</div>
             </div>
-            <div id="div-productos">
-                <button id="boton-guardar" class="clase-botones">guardar</button>
-            </div>
-        </section> 
+        </section>
         <script src="./restJabugo.js"></script>
     </body>        
 </html>    

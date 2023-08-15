@@ -28,18 +28,21 @@ h1{
     width: 100px;
     height: 30px;
 }
+#seccion-mesas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #mesas{
     display: flex;
     flex-wrap: wrap ;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
 
 }
 .clase-botones{
     width: 150px;
     height: 35px;
-    background-color: rgb(218, 143, 3);
+    background-color: transparent;
     border-radius: 20px;
     margin-top: 10px;
     font-size: 17px;
@@ -52,6 +55,7 @@ h1{
     display: flex;
     flex-direction:column;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .tarjeta-mesas{
@@ -91,6 +95,52 @@ input:checked + label {
 }
 .input-comida, .input-mesas  {
     display:none;
+}
+#div-bebidas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:6px;
+}
+#div-bebidas img{
+    width: 100px;
+    height: 100px;
+}
+.boton-bebidas{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    width: 120px;
+    margin-top: 10px;
+    background-color: bisque;
+    border: 1px dashed black;
+    border-radius: 5%;
+}
+#contenedor{
+    display: flex;
+
+}
+#div-resumen{
+    flex: 1;
+    background-color: bisque;
+    padding: 20px;
+    width: 20%;
+    height: 400px;
+
+}
+#div-principal{
+    flex:2;
+    padding: 20px;
+    width: 80%
+}
+#resumen{
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 384px;
+    background-color: white;
+    border: 3px solid black;
+    
 }
 @media (max-width: 400px){
     #div-productos1{
