@@ -36,6 +36,7 @@ h1{
 #mesas{
     display: flex;
     flex-wrap: wrap ;
+    justify-content: center;
     gap: 10px;
 
 }
@@ -143,7 +144,7 @@ input:checked + label {
     
 }
 @media (max-width: 400px){
-    #div-productos1{
+    #div-productos1, body{
         display: flex;
         flex-direction: column;
     }

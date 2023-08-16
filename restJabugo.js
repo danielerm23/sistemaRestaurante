@@ -82,7 +82,6 @@ function creacionMesas(){
     divRaciones.style.display="none"
     divComidas.style.display="none"
     contenedor.style.display='none'
-    resumen.innerHTML=""
 
     let con=1
     let creacionMesas
@@ -117,6 +116,7 @@ function funcionProductos(){
     clearInterval(intervalo)
     mesaSeleccion=`<h4>${mesa}</h4>`
     divProductos.innerHTML=mesaSeleccion
+    registroPedidos()
 }
 
 function bebidas() {
@@ -137,6 +137,9 @@ function comidas() {
 function registroPedidos(){
     
     resumen.innerHTML=""
+    if (valorBoton !==null && valorBoton!==undefined){
+        objetoMesa[mesa-1].bebidas.push(valorBoton)
+    }
     registroMesasUl=document.createElement('ul')
     objetoMesa[mesa-1].bebidas.forEach(item => {
         elementLi=document.createElement('li')
@@ -144,12 +147,10 @@ function registroPedidos(){
 
         registroMesasUl.appendChild(elementLi)
     });
-    resumen.appendChild(registroMesasUl)
     
-    registroMesas=document.createElement('p')
-    registroMesas.innerHTML=valorBoton
-    objetoMesa[mesa-1].bebidas.push(valorBoton)
-    resumen.appendChild(registroMesas)
+    resumen.appendChild(registroMesasUl)
+    valorBoton=null
+    
 }
 
 
