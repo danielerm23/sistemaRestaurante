@@ -97,17 +97,17 @@ input:checked + label {
 .input-comida, .input-mesas  {
     display:none;
 }
-#div-bebidas{
+#div-bebidas, #div-raciones{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap:6px;
 }
-#div-bebidas img{
+#div-bebidas img, #div-raciones img{
     width: 100px;
     height: 100px;
 }
-.boton-bebidas{
+.boton-bebidas, .boton-raciones{
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
@@ -142,9 +142,11 @@ input:checked + label {
     
 }
 @media (max-width: 400px){
-    #div-productos1, #contenedor{
+    #div-productos1, #contenedor, #seccion-productos, #div-productos{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media (max-width: 400px){

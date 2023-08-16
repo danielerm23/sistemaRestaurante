@@ -25,9 +25,11 @@ const botonCerveza=document.getElementById("boton-cerveza")
 const botonCervezaSinAlcohol=document.getElementById("boton-cerveza-sin-alcohol")
 const botonNestea=document.getElementById("boton-nestea")
 const botonBebidasMenu=document.querySelectorAll(".boton-bebidas")
+const botonRacionesMenu=document.querySelectorAll(".boton-raciones")
 
 const inputElement=document.getElementById("n-mesas")
 
+let objeto=[]
 let objetoMesa=[]
 let registroMesas=[]
 let registroMesasUl
@@ -63,7 +65,13 @@ function iniciarBoton(){
     botonBebidasMenu.forEach(boton=> {
         boton.addEventListener('click', () => {
             valorBoton=boton.textContent
-            registroPedidos()
+            bebidas()
+        }) 
+    }); 
+    botonRacionesMenu.forEach(boton=> {
+        boton.addEventListener('click', () => {
+            valorBoton=boton.textContent
+            raciones()
         }) 
     }); 
 }
@@ -123,11 +131,21 @@ function bebidas() {
     divBebidas.style.display="flex"
     divRaciones.style.display="none"
     divComidas.style.display="none"
+    if (valorBoton !==null && valorBoton!==undefined){
+        objetoMesa[mesa-1].bebidas.push(valorBoton)
+    }
+    registroPedidos()
+    valorBoton=null
 }
 function raciones() {
     divRaciones.style.display="flex"
     divBebidas.style.display="none"
     divComidas.style.display="none"
+    if (valorBoton !==null && valorBoton!==undefined){
+        objetoMesa[mesa-1].raciones.push(valorBoton)
+    }
+    registroPedidos()
+    valorBoton=null
 }
 function comidas() {
     divComidas.style.display="flex"
@@ -137,20 +155,23 @@ function comidas() {
 function registroPedidos(){
     
     resumen.innerHTML=""
-    if (valorBoton !==null && valorBoton!==undefined){
-        objetoMesa[mesa-1].bebidas.push(valorBoton)
-    }
     registroMesasUl=document.createElement('ul')
-    objetoMesa[mesa-1].bebidas.forEach(item => {
+    
+    objetoMesa[mesa-1].bebidas.forEach(item=> {
         elementLi=document.createElement('li')
         elementLi.textContent=item
-
+    
         registroMesasUl.appendChild(elementLi)
-    });
+    })
+    
+    objetoMesa[mesa-1].raciones.forEach(item=> {
+        elementLi=document.createElement('li')
+        elementLi.textContent=item
+    
+        registroMesasUl.appendChild(elementLi)
+    })
     
     resumen.appendChild(registroMesasUl)
-    valorBoton=null
-    
 }
 
 
