@@ -122,30 +122,33 @@ input:checked + label {
 
 }
 #div-resumen{
-    flex: 1;
     background-color: bisque;
     padding: 20px;
-    width: 20%;
+    width: 40%;
     height: 400px;
 
 }
 #div-principal{
-    flex:2;
     padding: 20px;
-    width: 80%
+    width: 60%
 }
 #resumen{
     display: flex;
     flex-direction: column;
     height: 350px;
-    width: 384px;
+    width: 100%;
     background-color: white;
     border: 3px solid black;
     
 }
 @media (max-width: 400px){
-    #div-productos1, body{
+    #div-productos1, #contenedor{
         display: flex;
         flex-direction: column;
+    }
+}
+@media (max-width: 400px){
+    #div-resumen{
+        width: 100%;
     }
 }
