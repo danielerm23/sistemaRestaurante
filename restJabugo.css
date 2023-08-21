@@ -250,8 +250,7 @@ input:checked + label {
 #a-historial:hover {
     color: #ff9900;
 }
-#historia-titulo ul li span{
-    border-left: 1px solid rgb(78, 62, 43);
+#historia-titulo ul li span:not(:last-child){
     border-right: 1px solid rgb(78, 62, 43);
     margin: 5px;
     padding: 5px;
