@@ -9,11 +9,49 @@
     </head>
 
     <body>
-
-
-
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><a onclick=reniciarPagina()>Inicio</a></li>
+                <li><button onclick=historialDeMesas() id="a-historial">Historial de Mesas</button></li>
+                <li><a href="https://danielerm23.github.io/doubleedge/public">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
 
         <h1>Jabugo<label id="logo-pagina"><img src="./img/jabugologo.png"></label></h1>
+
+        <div id="mi-modal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar">&times;</span>
+                <p>Monto Total: <span id="monto-pagar"></span></p>
+                <p>pagar con:</p>
+                <label for="pago-tarjeta" id="label-tarjeta">tarjeta <input id="pago-tarjeta" type="radio" name="pago" class="pago"></label>
+                <label for="pago-efectivo" id="label-efectivo">efectivo <input id="pago-efectivo" type="radio" name="pago" class="pago"></label>
+                <label for="vuelto" id="label-vuelto">monto que entregó el cliente<input id="vuelto" type="number"></label>
+                <button id="continuar-pago" class="clase-botones">continuar</button>
+                <p id="resultado-cobro"></p>
+                <button class ="clase-botones"id="boton-finalizar">finalizar</button>
+            </div>
+        </div>
+
+        <div id="modal-cerrar-mesa">
+            <div id="modal-contenido-cerrar-mesa">
+                <span class="cerrar1">&times;</span>
+                <p>estas seguro de cerrar la mesa <span id="mesa-a-cerrar"></span> ?</p>
+                <button id="si-cerrar" class="clase-botones">Si</button><button id="no-cerrar" class="clase-botones">No</button>
+            </div>
+        </div>
+
+        <div id="tabla">
+            <div id="historia-titulo">
+                <ul>
+                    <li><span>mesa</span><span>bebidas</span><span>raciones</span><span>comidas</span><span>total</span></li>
+                </ul>
+            </div>
+            <div id="historia">
+            </div>
+            <button id="boton-regresar" class="clase-botones">Regresar</button>
+        </div>
 
         <section id="seccion-inicio">
             <div id="inicio">
@@ -31,7 +69,10 @@
         <section id="contenedor">
             <div id="div-resumen">
                 <div id="resumen"></div>
+                <p id="pTotal">total: <span id="total"></span> €</p>
+                <div id="div-botones-final"><button id="boton-modal-pagar" class="botones-modal">pagar</button><button id="boton-modal-cerrar-mesa" class="botones-modal">cerrar mesa</button></div>
             </div>
+            
             <div id="div-principal">
                 <section id="seccion-productos">
 
@@ -72,7 +113,16 @@
                     <button class="boton-raciones" id="brusquetas"><img src="./img/brusquetas.png" alt="">brusquetas</button>
                 </div>
 
-                <div id="div-comidas">comidas</div>
+                <div id="div-comidas">
+                    <button class="boton-comidas" id="hamburguesa"><img src="./img/hamburguesa.png">hamburguesa</button>
+                    <button class="boton-comidas" id="pizza4quesos"><img src="./img/pizza.png" alt="">pizza4quesos</button>
+                    <button class="boton-comidas" id="paella"><img src="./img/Capa 0.png" alt="">paella</button>
+                    <button class="boton-comidas" id="kebap"><img src="./img/kebap.png" alt="">kebap</button>
+                    <button class="boton-comidas" id="pizca-andina"><img src="./img/pizca.png" alt="">pizca andina</button>
+                    <button class="boton-comidas" id="patacones"><img src="./img/patacones.png" alt="">patacones</button>
+                    <button class="boton-comidas" id="roast-beef"><img src="./img/roastbeef.png" alt="">roast beef</button>
+                    <button class="boton-comidas" id="tomahawk"><img src="./img/tomahawk.png" alt="">tomahawk</button>
+                </div>
             </div>
         </section>
         <script src="./restJabugo.js"></script>
