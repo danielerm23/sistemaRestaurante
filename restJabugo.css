@@ -252,6 +252,8 @@ input:checked + label {
 }
 #historia-titulo ul li span:not(:last-child){
     border-right: 1px solid rgb(78, 62, 43);
+}
+#historia-titulo ul li span{
     margin: 5px;
     padding: 5px;
 
