@@ -44,7 +44,9 @@ document.getElementById("boton-modal-cerrar-mesa").addEventListener('click', ()=
     document.getElementById("modal-cerrar-mesa").style.display="block"
 })
 document.getElementById("boton-modal-pagar").addEventListener('click', ()=>{
-    document.getElementById('mi-modal').style.display='block'
+    if(objetoMesa[mesa-1].total>1){
+        document.getElementById('mi-modal').style.display='block'
+    }
 })
 
 document.querySelector(".cerrar").addEventListener('click', ()=>{
